@@ -57,7 +57,7 @@
                     <!-- Project 1 -->
                     <div
                         class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="{{ asset('storage/maps.webp') }}" alt="Project 1" class="w-full h-48 object-cover">
+                        <img src="{{ Storage::url('Img/maps.webp') }}" alt="Project 1" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-2xl font-semibold mb-3 text-blue-600">Latihan 1</h3>
                             <p class="text-gray-700 mb-4">Tambahkan marker lokasi, ubah tile layer ke CartoDB/Esri, dan
@@ -72,7 +72,7 @@
 
         <!-- Project 2 -->
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
-            <img src="{{ asset('storage/maps.webp') }}" alt="Project 1" class="w-full h-48 object-cover">
+            <img src="{{ Storage::url('Img/maps.webp') }}" alt="Project 1" class="w-full h-48 object-cover">
             <div class="p-6 text-gray-500">
                 <h3 class="text-2xl font-semibold mb-3 ">Coming Soon</h3>
                 <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -88,7 +88,7 @@
 
         <!-- Project 3 -->
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
-            <img src="{{ asset('storage/maps.webp') }}" alt="Project 1" class="w-full h-48 object-cover">
+            <img src="{{ Storage::url('Img/maps.webp') }}" alt="Project 1" class="w-full h-48 object-cover">
             <div class="p-6 text-gray-500">
                 <h3 class="text-2xl font-semibold mb-3">Coming Soon</h3>
                 <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut
@@ -115,7 +115,7 @@
                     <!-- Project 1 -->
                     <div
                         class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="{{ asset('storage/maps.webp') }}" alt="Project 1" class="w-full h-48 object-cover">
+                        <img src="{{ Storage::url('Img/maps.webp') }}" alt="Project 1" class="w-full h-48 object-cover">
                         <div class="p-6 ">
                             <h3 class="text-2xl font-semibold mb-3 text-blue-600">Tugas 1</h3>
                             <p class="text-gray-700 mb-4">Buat peta Google Maps dan Leaflet.js di Laravel, tampilkan
@@ -130,7 +130,7 @@
 
         <!-- Project 2 -->
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
-            <img src="{{ asset('storage/maps.webp') }}" alt="Project 1" class="w-full h-48 object-cover">
+            <img src="{{ Storage::url('Img/maps.webp') }}" alt="Project 1" class="w-full h-48 object-cover">
             <div class="p-6 text-gray-500">
                 <h3 class="text-2xl font-semibold mb-3 ">Coming Soon</h3>
                 <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate
@@ -147,7 +147,7 @@
 
         <!-- Project 3 -->
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 ">
-            <img src="{{ asset('storage/maps.webp') }}" alt="Project 1" class="w-full h-48 object-cover ">
+            <img src="{{ Storage::url('Img/maps.webp') }}" alt="Project 1" class="w-full h-48 object-cover ">
             <div class="p-6 text-gray-500">
                 <h3 class="text-2xl font-semibold mb-3 ">Coming Soon</h3>
                 <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius non facere,
