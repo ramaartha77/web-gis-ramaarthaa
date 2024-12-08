@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Include Laravel Vite CSS -->
-    @vite('resources/css/app.css')
-
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Tugas 1 - Dasar Peta Interaktif</title>
 
     <!-- Leaflet.js CDN -->

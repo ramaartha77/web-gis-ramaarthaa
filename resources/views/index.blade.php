@@ -2,11 +2,12 @@
 <html class="scroll-smooth" lang="en">
 
 <head>
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Geographic Information Systems Portfolio - Kadek Rama Artha Mahesa</title>
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
