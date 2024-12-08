@@ -8,4 +8,8 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    // Add this to force HTTPS
+    server: {
+        https: true,
+    },
 });
