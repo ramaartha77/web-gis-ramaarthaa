@@ -7,13 +7,20 @@
     <title>Geographic Information Systems Portfolio - Kadek Rama Artha Mahesa</title>
     @vite('resources/css/app.css')
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-900 font-sans leading-normal tracking-normal ">
     <!-- Navigation -->
     <nav class="bg-white shadow-md fixed w-full z-10 top-0">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="text-xl font-bold text-blue-600">GIS Portfolio</div>
+            <div class="text-xl font-bold text-black">GIS Portfolio</div>
             <div class="space-x-4">
                 <a href="#home" class="hover:text-blue-600 transition duration-300">Home</a>
                 <a href="#projects" class="hover:text-blue-600 transition duration-300">Projects</a>
@@ -23,18 +30,20 @@
 
     <!-- Hero Section -->
     <header id="home"
-        class="w-full h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white pt-16">
-        <div class="text-center px-4">
-
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Kadek Rama Artha Mahesa</h1>
-            <h2 class="text-2xl md:text-3xl font-medium mb-2">Geographic Information Systems</h2>
-            <p class="text-xl md:text-2xl font-light mb-6">2105541131 | Udayana University</p>
-            <div class="flex justify-center space-x-4">
-
-                <a href="#projects"
-                    class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-blue-600 transition duration-300">
-                    View Projects
-                </a>
+        class="w-full h-screen flex items-center justify-center bg-gradient-to-r from-fuchsia-600 to-purple-600 text-white pt-16">
+        <div class="px-4">
+            <div data-aos="fade-up" data-aos-duration="3000">
+                <div>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Kadek Rama Artha Mahesa</h1>
+                    <h2 class="text-2xl md:text-3xl font-medium mb-2">Geographic Information Systems</h2>
+                    <p class="text-xl md:text-2xl font-light mb-6">2105541131 | Udayana University</p>
+                </div>
+                <div class="flex  space-x-4">
+                    <a href="#projects"
+                        class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-xl hover:bg-white hover:text-blue-600 transition duration-300">
+                        View Projects
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -42,7 +51,7 @@
     <!-- Latihan -->
     <section id="projects" class="py-16 bg-white">
         <a href= "{{ route('map-latihan1') }}">
-            <div class="container mx-auto px-4">
+            <div class="container mx-auto px-4" data-aos="fade-up" data-aos-duration="2500">
                 <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Latihan</h2>
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Project 1 -->
@@ -100,7 +109,7 @@
     <!-- Tugas -->
     <section id="projects" class="py-16 bg-white">
         <a href= "{{ route('map-tugas1') }}">
-            <div class="container mx-auto px-4">
+            <div class="container mx-auto px-4" data-aos="fade-up" data-aos-duration="2500">
                 <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Tugas</h2>
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Project 1 -->
@@ -172,6 +181,9 @@
 
         </div>
     </footer>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
