@@ -59,7 +59,7 @@ locations.forEach(location => {
 });
 
 // Google Maps API Map
-function initMap() {
+window.initMap = function() {
     const googleMapDiv = document.getElementById('google-map');
     const googleMap = new google.maps.Map(googleMapDiv, {
         center: { lat: -8.7984047, lng: 115.1698715 },

@@ -8,7 +8,7 @@
 
     <!-- Include Laravel Vite CSS -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
     <title>Latihan 1 - Dasar Peta Interaktif</title>
 
     <!-- Leaflet.js CDN -->
@@ -16,8 +16,8 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     <!-- Google Maps API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4lKVb0eLSNyhEO-C_8JoHhAvba6aZc3U&callback=initMap" async
-        defer></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4lKVb0eLSNyhEO-C_8JoHhAvba6aZc3U&callback=initMap"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>

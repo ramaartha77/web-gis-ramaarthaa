@@ -11,7 +11,7 @@ const denpasarLocation = {
 };
 
 // Inisialisasi Google Maps
-function initMap() {
+window.initMap = function() {
     // Variabel untuk menyimpan zoom level dan pusat awal
     const initialCenter = unudLocation;
     const initialZoom = 15;
