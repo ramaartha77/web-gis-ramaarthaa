@@ -54,6 +54,7 @@ document.getElementById("polygonForm").addEventListener("submit", function (e) {
 
     try {
         const coords = JSON.parse(document.getElementById("polygonCoords").value);
+        console.log("Parsed coordinates:", coords);
 
         fetch("/api/polygons", {
             method: "POST",
@@ -63,10 +64,18 @@ document.getElementById("polygonForm").addEventListener("submit", function (e) {
             },
             body: JSON.stringify({ coordinates: coords }),
         })
-            .then((res) => res.json())
+            .then(response => {
+                if (!response.ok) {
+                    return response.text().then(text => {
+                        console.log("Server response:", text);
+                        throw new Error(`Server returned ${response.status}: ${text}`);
+                    });
+                }
+                return response.json();
+            })
             .then((data) => {
                 alert("Poligon ditambahkan!");
-                // Optional: Add polygon to map
+                // Add polygon to both maps
                 if (window.googleMap) {
                     new google.maps.Polygon({
                         paths: coords,
@@ -78,13 +87,16 @@ document.getElementById("polygonForm").addEventListener("submit", function (e) {
                         fillOpacity: 0.35
                     });
                 }
+
+                // Add to Leaflet map
+                L.polygon(coords.map(coord => [coord.lat, coord.lng]), {
+                    color: 'red',
+                    fillOpacity: 0.35
+                }).addTo(leafletMap);
             })
-            .catch((error) => {
-                console.error("Error:", error);
-                alert("Gagal menambahkan poligon.");
-            });
+
     } catch (error) {
         console.error("Invalid JSON for coordinates:", error);
-        alert("Koordinat poligon tidak valid.");
+        alert("Koordinat poligon tidak valid: " + error.message);
     }
 });

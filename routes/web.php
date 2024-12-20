@@ -16,6 +16,8 @@ use App\Http\Controllers\MapDataController;
 |
 */
 
+
+// Web routes
 Route::get('/', function () {
     return view('index');
 })->name('index');
@@ -32,20 +34,16 @@ Route::get('/map-tugas2', function () {
     return view('map-tugas2');
 })->name('map-tugas2');
 
-
 Route::get('/map-interactive', function () {
     return view('map-interactive');
 })->name('map-interactive');
 
-Route::get('/api/markers', [MapDataController::class, 'getMarkers']);
-Route::get('/api/polygons', [MapDataController::class, 'getPolygons']);
-Route::post('/api/markers', [MapDataController::class, 'storeMarker']);
-Route::post('/api/polygons', [MapDataController::class, 'storePolygon']);
-Route::delete('/api/markers/{id}', [MapDataController::class, 'deleteMarker']);
-Route::delete('/api/polygons/{id}', [MapDataController::class, 'deletePolygon']);
-
-
-Route::get('/interactive', [MapDataController::class, 'index'])->name('map.index');
-Route::post('/markers', [MapDataController::class, 'storeMarker'])->name('map.storeMarker');
-Route::post('/polygons', [MapDataController::class, 'storePolygon'])->name('map.storePolygon');
-Route::get('/data', [MapDataController::class, 'getData'])->name('map.getData');
+// API routes
+Route::prefix('api')->group(function () {
+    Route::get('/markers', [MapDataController::class, 'getMarkers']);
+    Route::get('/polygons', [MapDataController::class, 'getPolygons']);
+    Route::post('/markers', [MapDataController::class, 'storeMarker']);
+    Route::post('/polygons', [MapDataController::class, 'storePolygon']);
+    Route::delete('/markers/{id}', [MapDataController::class, 'deleteMarker']);
+    Route::delete('/polygons/{id}', [MapDataController::class, 'deletePolygon']);
+});

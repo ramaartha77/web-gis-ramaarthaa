@@ -37,12 +37,21 @@ class MapDataController extends Controller
     // Store a new polygon
     public function storePolygon(Request $request)
     {
-        $validated = $request->validate([
-            'coordinates' => 'required|json',
-        ]);
+        try {
+            $validated = $request->validate([
+                'coordinates' => 'required|array',
+                'coordinates.*.lat' => 'required|numeric',
+                'coordinates.*.lng' => 'required|numeric',
+            ]);
 
-        $polygon = Polygon::create($validated);
-        return response()->json($polygon, 201);
+            $polygon = Polygon::create([
+                'coordinates' => json_encode($request->coordinates)
+            ]);
+
+            return response()->json($polygon, 201);
+        } catch (\Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 400);
+        }
     }
 
     // Delete a marker

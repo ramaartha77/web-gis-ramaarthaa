@@ -9,8 +9,7 @@
     <!-- Include Laravel Vite CSS -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+
 
     <title>Latihan 2 - Peta Interaktif</title>
 
@@ -19,8 +18,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     <!-- Google Maps API -->
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4lKVb0eLSNyhEO-C_8JoHhAvba6aZc3U&callback=initMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4lKVb0eLSNyhEO-C_8JoHhAvba6aZc3U"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -29,6 +27,10 @@
 
 <body>
     <section class="bg-gray-100 min-h-screen flex items-center justify-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <div id="leaflet-map" class="h-96 rounded-lg shadow-lg"></div>
+            <div id="google-map" class="h-96 rounded-lg shadow-lg"></div>
+        </div>
         <div class="container max-w-4xl mx-auto px-4 py-8 space-y-8">
             <!-- Marker Form -->
             <div class="bg-white shadow-lg rounded-lg p-6">

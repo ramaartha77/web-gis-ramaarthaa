@@ -95,18 +95,27 @@ function addMarkerToMap(markerData) {
 
 // Add polygon to map and table
 function addPolygonToMap(polygonData) {
-    const coordinates = JSON.parse(polygonData.coordinates);
-    const polygonCoords = coordinates.map(coord => [coord.lat, coord.lng]);
+    let coordinates;
+    try {
+        // Handle both string and array cases
+        coordinates = typeof polygonData.coordinates === 'string'
+            ? JSON.parse(polygonData.coordinates)
+            : polygonData.coordinates;
 
-    const polygon = L.polygon(polygonCoords).addTo(map);
-    polygons.set(polygonData.id, {
-        layer: polygon,
-        data: polygonData
-    });
+        const polygonCoords = coordinates.map(coord => [coord.lat, coord.lng]);
 
-    updatePolygonTable();
+        const polygon = L.polygon(polygonCoords).addTo(map);
+        polygons.set(polygonData.id, {
+            layer: polygon,
+            data: polygonData
+        });
+
+        updatePolygonTable();
+    } catch (error) {
+        console.error('Error parsing polygon coordinates:', error);
+        showAlert('Error displaying polygon', 'danger');
+    }
 }
-
 // Load database
 async function loadExistingData() {
     try {
@@ -139,7 +148,7 @@ async function loadExistingData() {
 }
 
 // Update marker table
-// Update marker table
+
 function updateMarkerTable() {
     const tbody = document.querySelector('#markerTable tbody');
     if (!tbody) return;
@@ -231,40 +240,39 @@ function setupEventListeners() {
     });
 
     // Polygon form
-    document.getElementById('polygonForm').addEventListener('submit', async function(e) {
-        e.preventDefault();
 
-        try {
-            const coordinates = JSON.parse(document.getElementById('polygonCoords').value);
-            const polygonData = {
-                coordinates: JSON.stringify(coordinates)
-            };
+document.getElementById('polygonForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
 
-            const response = await fetch('/api/polygons', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
-                },
-                body: JSON.stringify(polygonData)
-            });
+    try {
 
-            if (!response.ok) {
-                throw new Error('Failed to store polygon');
-            }
+        const coordinates = JSON.parse(document.getElementById('polygonCoords').value);
 
-            const savedPolygon = await response.json();
-            addPolygonToMap(savedPolygon);
-            showAlert('Polygon added successfully', 'success');
-            this.reset();
-        } catch (error) {
-            console.error('Error storing polygon:', error);
-            if (error.response) {
-                console.error('Response:', await error.response.text());
-            }
-            showAlert('Error adding polygon', 'danger');
+        const response = await fetch('/api/polygons', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+            },
+
+            body: JSON.stringify({ coordinates: coordinates })
+        });
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            console.error('Server response:', errorText);
+            throw new Error('Failed to store polygon');
         }
-    });
+
+        const savedPolygon = await response.json();
+        addPolygonToMap(savedPolygon);
+        showAlert('Polygon added successfully', 'success');
+        this.reset();
+    } catch (error) {
+        console.error('Error storing polygon:', error);
+        showAlert('Error adding polygon. Check the console for details.', 'danger');
+    }
+});
 
     // Delete marker handler
     document.getElementById('markerTable').addEventListener('click', async function(e) {
