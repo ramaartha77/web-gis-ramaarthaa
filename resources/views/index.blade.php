@@ -5,12 +5,13 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Geographic Information Systems Portfolio - Kadek Rama Artha Mahesa</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
 </head>
 
@@ -69,24 +70,25 @@
         </a>
 
         <!-- Project 2 -->
-        <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
-            <img src="{{ asset('storage/maps.webp') }}" alt="Project 1" class="w-full h-48 object-cover">
-            <div class="p-6 text-gray-500">
-                <h3 class="text-2xl font-semibold mb-3 ">Coming Soon</h3>
-                <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Consectetur repellendus nesciunt commodi nisi, debitis inventore.</p>
-                <!--
-                <div class="flex items-center">
-                    <i class="fas fa-city text-indigo-500 mr-3 text-2xl"></i>
-                    <span class="text-gray-600">Google Maps API, Letflet, Laravel</span>
+        <a href= "{{ route('map-interactive') }}">
+            <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                <img src="{{ asset('storage/maps.webp') }}" alt="Project 1" class="w-full h-48 object-cover">
+                <div class="p-6 text-blue-500">
+                    <h3 class="text-2xl font-semibold mb-3 ">Latihan 2 - Map Interactive</h3>
+                    <p class="text-gray-700 mb-4">Terhubung dengan database. Input Marker dan Polygon </p>
+
+                    <div class="flex items-center">
+                        <i class="fas fa-city text-indigo-500 mr-3 text-2xl"></i>
+                        <span class="text-gray-600">Google Maps API, Letflet, Laravel, Database</span>
+                    </div>
+
                 </div>
-                -->
             </div>
-        </div>
+        </a>
 
         <!-- Project 3 -->
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
-            <img src="{{ asset('storage/maps.webp') }}" alt="Project 1" class="w-full h-48 object-cover">
+            <img src="{{ asset('storage/kendr.jpeg') }}" alt="Project 1" class="w-full h-48 object-cover">
             <div class="p-6 text-gray-500">
                 <h3 class="text-2xl font-semibold mb-3">Coming Soon</h3>
                 <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut
@@ -127,25 +129,27 @@
         </a>
 
         <!-- Project 2 -->
-        <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
-            <img src="{{ asset('storage/maps.webp') }}" alt="Project 1" class="w-full h-48 object-cover">
-            <div class="p-6 text-gray-500">
-                <h3 class="text-2xl font-semibold mb-3 ">Coming Soon</h3>
-                <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate
-                    doloremque placeat molestias blanditiis quo tempore!</p>
-                <!--
-                <div class="flex items-center">
-                    <i class="fas fa-city text-indigo-500 mr-3 text-2xl"></i>
-                    <span class="text-gray-600">Google Maps API, Letflet, Laravel</span>
+        <a href= "{{ route('map-tugas2') }}">
+            <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                <img src="{{ asset('storage/maps.webp') }}" alt="Project 1" class="w-full h-48 object-cover">
+                <div class="p-6 text-blue-500">
+                    <h3 class="text-2xl font-semibold mb-3 ">Tugas 2 - Map Interactive</h3>
+                    <p class="text-gray-700 mb-4">Membuat maps interactive dengan menggunakan Admin LTE yang terhubung
+                        dengan database</p>
+
+                    <div class="flex items-center">
+                        <i class="fas fa-city text-indigo-500 mr-3 text-2xl"></i>
+                        <span class="text-gray-600">Letflet, Laravel, Admin LTE</span>
+                    </div>
+
                 </div>
-                -->
             </div>
-        </div>
+        </a>
 
 
         <!-- Project 3 -->
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 ">
-            <img src="{{ asset('storage/maps.webp') }}" alt="Project 1" class="w-full h-48 object-cover ">
+            <img src="{{ asset('storage/kendr.jpeg') }}" alt="Project 1" class="w-full h-48 object-cover ">
             <div class="p-6 text-gray-500">
                 <h3 class="text-2xl font-semibold mb-3 ">Coming Soon</h3>
                 <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius non facere,
@@ -176,7 +180,6 @@
                         class="fab fa-instagram text-2xl"></i></a>
             </div>
             <p class="mb-2">© 2024 Kadek Rama Artha Mahesa. All Rights Reserved.</p>
-
         </div>
     </footer>
     <script>
