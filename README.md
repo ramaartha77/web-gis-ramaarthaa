@@ -1,53 +1,59 @@
-# Student Attendance Management System with RFID
+# GIS-Based Website for Geospatial Data Management  
 
-This is a web-based application built using [Laravel Filament v3](https://filamentphp.com/) to manage the attendance of students at Udayana University. The system uses **RFID-based Student Identity Cards** to record and track attendance efficiently.
+This project is a **GIS (Geographic Information System) website** built using Laravel and TailwindCSS. It integrates the **Google Maps API** and **LetFleet** for interactive geospatial visualization and data management. The backend uses **MySQL**, and the admin dashboard is enhanced with **AdminLTE** for a better user experience.  
 
 ---
 
-## Features
+## Features  
 
-- **RFID-Based Attendance Tracking**  
-  Students can record their attendance by scanning their RFID-based Student Identity Cards.
-  
+- **Interactive Google Maps Integration**  
+  Visualize geospatial data interactively using Google Maps API.  
+
+- **LetFleet Integration**  
+  Integration with LetFleet for fleet management and real-time tracking.  
+
 - **Admin Dashboard**  
-  Manage students, RFID cards, attendance records, and more using an intuitive admin panel built with Laravel Filament.
+  Manage geospatial data, users, and settings through a clean and feature-rich dashboard powered by AdminLTE.  
 
-- **Real-Time Attendance Data**  
-  View and manage real-time attendance records.
+- **Search and Filters**  
+  Search and filter geospatial data by location, category, or attributes.  
 
-- **User Management**  
-  Roles and permissions for administrators, faculty, and other staff.
+- **Role-Based Access Control**  
+  Secure the application with user roles and permissions for admins and standard users.  
 
-- **Search and Reports**  
-  Search attendance records and generate detailed reports for specified dates or courses.
-
----
-
-## Tech Stack
-
-- **Backend Framework**: Laravel 10
-- **Admin Panel**: Laravel Filament v3
-- **Frontend Styling**: Tailwind CSS
-- **Database**: MySQL
-- **Language**: PHP 8.2
+- **Responsive UI**  
+  Fully responsive user interface using TailwindCSS for seamless access across devices.  
 
 ---
 
-## Prerequisites
+## Tech Stack  
 
-- PHP 8.2 or higher
-- Composer
-- MySQL
-- Node.js (for frontend asset compilation)
-- NPM/Yarn
+- **Backend Framework**: Laravel 10  
+- **Frontend Framework**: TailwindCSS  
+- **Map Integration**: Google Maps API  
+- **Fleet Management**: LetFleet  
+- **Database**: MySQL  
+- **Admin Panel**: AdminLTE  
+- **Language**: PHP 8.2  
 
 ---
 
-## Installation
+## Prerequisites  
 
-Follow these steps to set up the project on your local machine:
+- PHP 8.2 or higher  
+- Composer  
+- MySQL  
+- Node.js (for frontend asset compilation)  
+- NPM/Yarn  
+- Google Maps API Key  
 
-1. Clone the repository:
+---
+
+## Installation  
+
+Follow these steps to set up the project on your local machine:  
+
+1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/your-username/your-repo-name.git  
+   cd your-repo-name  
