@@ -97,6 +97,6 @@ document.getElementById("polygonForm").addEventListener("submit", function (e) {
 
     } catch (error) {
         console.error("Invalid JSON for coordinates:", error);
-        alert("Koordinat poligon tidak valid: " + error.message);
+        alert("Koordinat polygon tidak valid: " + error.message);
     }
 });
