@@ -148,21 +148,22 @@
 
 
         <!-- Project 3 -->
-        <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 ">
-            <img src="{{ asset('storage/kendr.jpeg') }}" alt="Project 1" class="w-full h-48 object-cover ">
-            <div class="p-6 text-gray-500">
-                <h3 class="text-2xl font-semibold mb-3 ">Coming Soon</h3>
-                <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius non facere,
-                    obcaecati cumque laboriosam quam!</p>
+        <a href= "{{ url('/handson3dan4') }}">
+            <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 ">
+                <img src="{{ asset('storage/kendr.jpeg') }}" alt="Project 1" class="w-full h-48 object-cover ">
+                <div class="p-6 text-gray-500">
+                    <h3 class="text-2xl font-semibold mb-3 ">Hands On 3 dan 4</h3>
+                    <p class="text-gray-700 mb-4">Routing</p>
 
-                <!--
+                    <!--
                 <div class="flex items-center">
                     <i class="fas fa-city text-indigo-500 mr-3 text-2xl"></i>
                     <span class="text-gray-600">Google Maps API, Letflet, Laravel</span>
                 </div>
                 -->
+                </div>
             </div>
-        </div>
+        </a>
         </div>
         </div>
     </section>
