@@ -63,7 +63,7 @@ Route::post('/polygons', [MapDataController::class, 'storePolygon'])->name('map.
 Route::get('/data', [MapDataController::class, 'getData'])->name('map.getData');
 
 /*HANDS-ON 3 : */
-Route::get('/handson3', [PetaCRUDController::class, 'index'])->name('handson3.index');
+Route::get('/handson3dan4', [PetaCRUDController::class, 'index'])->name('handson3.index');
 Route::get('/listDataMarker', [PetaCRUDController::class, 'getListMarker'])->name('handson3.getListMarker');
 Route::get('/listDataPolygon', [PetaCRUDController::class, 'getListPolygon'])->name('handson3.getListPolygon');
 Route::post('/storeMarker', [PetaCRUDController::class, 'index'])->name('handson3.storeMarker');

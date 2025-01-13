@@ -34,24 +34,24 @@
                 data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                     with font-awesome or any other icon font library -->
-                <li class="nav-item menu-open">
+                {{-- <li class="nav-item menu-open">
                     <a href="{{ url('/') }}" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
                         </p>
                     </a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    {{-- <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             Praktikum
                             <i class="fas fa-angle-left right"></i>
                             <span class="badge badge-info right">4</span>
                         </p>
-                    </a>
-                    <ul class="nav nav-treeview">
+                    </a> --}}
+                    {{-- <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{ url('/map-latihan1') }}" class="nav-link" target="_blank">
                                 <i class="far fa-circle nav-icon"></i>
@@ -69,15 +69,15 @@
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Tugas 2</p>
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ url('/handson3') }}" class="nav-link" target="_blank">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Hands-On 3 dan 4</p>
-                            </a>
-                        </li>
-                    </ul>
+                        </li> --}}
+                <li class="nav-item">
+                    <a href="{{ url('/handson3dan4') }}" class="nav-link" target="_blank">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Hands-On 3 dan 4</p>
+                    </a>
                 </li>
+            </ul>
+            </li>
 
             </ul>
         </nav>
